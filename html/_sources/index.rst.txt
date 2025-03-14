@@ -1,26 +1,20 @@
-.. FixOut documentation master file, created by
-   sphinx-quickstart on Thu Mar 13 21:40:37 2025.
+.. FixOut API documentation master file, created by
+   sphinx-quickstart on Thu Aug 24 11:34:46 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-FixOut documentation
-====================
-
-FixOut is a package to help ML practitioners assess fairness in their models.
-It is a Python library that provides functionalities related to fairness assessment, explanations and unfairness mitigation.
-
-This reference manual details functions, modules, and objects included in FixOut, 
-describing what they are and what they do.
-For learning how to use FixOut from different examples, see the `demos page <https://fixout.fr/demos>`_.
-
-.. Add your content using ``reStructuredText`` syntax. See the
-.. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-.. documentation for details.
-
+Welcome to FixOut API's documentation!
+======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   fixout
+   fixout_api
 
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`

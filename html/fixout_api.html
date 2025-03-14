@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fixout_api package &mdash; FixOut API 0.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to FixOut API’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            FixOut API
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">fixout_api package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-fixout_api.server">fixout_api.server module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixout_api.server.FixOutHandler"><code class="docutils literal notranslate"><span class="pre">FixOutHandler</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.close"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.close()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.computeFairnessMetrics"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.computeFairnessMetrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.getAExplanation"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.getAExplanation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.getExplanations"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.getExplanations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.setEvaluationMethod"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.setEvaluationMethod()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.setModelDef"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.setModelDef()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.setOriginalModel"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.setOriginalModel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.setSensitiveFeature"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.setSensitiveFeature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixout_api.server.FixOutHandler.setTrainingData"><code class="docutils literal notranslate"><span class="pre">FixOutHandler.setTrainingData()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fixout_api.server.explain_instance"><code class="docutils literal notranslate"><span class="pre">explain_instance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixout_api.server.toFIExplanation"><code class="docutils literal notranslate"><span class="pre">toFIExplanation()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-fixout_api.fairness">fixout_api.fairness module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fixout_api.fairness.demographic_parity"><code class="docutils literal notranslate"><span class="pre">demographic_parity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixout_api.fairness.equal_opportunity"><code class="docutils literal notranslate"><span class="pre">equal_opportunity()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixout_api.fairness.predictive_equality"><code class="docutils literal notranslate"><span class="pre">predictive_equality()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-fixout_api.utils">fixout_api.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-fixout_api">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">FixOut API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">fixout_api package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/fixout_api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fixout-api-package">
+<h1>fixout_api package<a class="headerlink" href="#fixout-api-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-fixout_api.server">
+<span id="fixout-api-server-module"></span><h2>fixout_api.server module<a class="headerlink" href="#module-fixout_api.server" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fixout_api.server.</span></span><span class="sig-name descname"><span class="pre">FixOutHandler</span></span><a class="headerlink" href="#fixout_api.server.FixOutHandler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements the FixOut’s server endpoint.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.close" title="Permalink to this definition"></a></dt>
+<dd><p>Closes the current session with the server.
+This operation destroys the data received during the session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – Zero, if the operation is completed succefully</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.computeFairnessMetrics">
+<span class="sig-name descname"><span class="pre">computeFairnessMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.computeFairnessMetrics" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate fariness metrics for a given ensemble of instances.</p>
+<p>Supported fariness metrics: Demographic Parity, Equal Opportunity, Predictive Equality.</p>
+<p>Check out the enum types : ‘FairMetricEnum’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metrics</strong> (<em>list</em>) – List of metrics to be calculated.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be take into account to calculate fairness metrics.</p></li>
+<li><p><strong>X_test</strong> (<em>array-like</em><em> of </em><em>shape</em>) – Dataset</p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em><em> of </em><em>shape</em>) – Predicted outcomes related to X_test.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>results</strong> – List with all requested metrics calculated.
+Returns an empty list if no metric is informed or a problem when calculating the confusion matrix is found.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of FairMetric</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.getAExplanation">
+<span class="sig-name descname"><span class="pre">getAExplanation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.getAExplanation" title="Permalink to this definition"></a></dt>
+<dd><p>Explain the prediction of a data instance.
+The training dataset must be informed previously.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sample</strong> (<em>data instance</em><em> (</em><em>list</em><em> of </em><em>double</em><em>)</em>) – Sample from the dataset whose associated prediction must be explained</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>explanation</strong> – An explanation in the form of list of feature importance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>FIExplanation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.getExplanations">
+<span class="sig-name descname"><span class="pre">getExplanations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.getExplanations" title="Permalink to this definition"></a></dt>
+<dd><p>Build the list of top-10 most important features when predicting a sample of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>samples</strong> (<em>list</em>) – Samples from a dataset</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>results</strong> – List with the top-10 most important features.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>FIExplanation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.setEvaluationMethod">
+<span class="sig-name descname"><span class="pre">setEvaluationMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">evalMethod</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.setEvaluationMethod" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates the evaluation method that should be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>evalMethod</strong> (<em>EvalMethod</em>) – <p>The type of evaluation method.</p>
+<p>Supported methods : explanations (EXP), fairness metris (MET), and both (BOTH).</p>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – Zero, if the operation is completed succefully</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.setModelDef">
+<span class="sig-name descname"><span class="pre">setModelDef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definitions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.setModelDef" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates the characteristics of the original model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>definitions</strong> (<em>ModelDefinitions</em>) – <p>The characteristics of the model, such as:
+model type, number of expected features, number of expected feature that are non-numeric.</p>
+<p>Supported model types: Logistic Regression (LR), Random Forest (RF), AdaBoost (ADA), Bagging (BAG).</p>
+</p></li>
+<li><p><strong>status</strong> (<em>int</em>) – Zero, if the operation is completed succefully</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.setOriginalModel">
+<span class="sig-name descname"><span class="pre">setOriginalModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seriModel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.setOriginalModel" title="Permalink to this definition"></a></dt>
+<dd><p>Sends the original model to the FixOut’s server endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seriModel</strong> (<em>binary</em><em> (</em><em>serialised model</em><em>)</em>) – Trained model</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – Zero, if the operation is completed succefully</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.setSensitiveFeature">
+<span class="sig-name descname"><span class="pre">setSensitiveFeature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensitiveFeatures</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.setSensitiveFeature" title="Permalink to this definition"></a></dt>
+<dd><p>Informs the server the list of features that are considered sensitive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sensitiveFeature</strong> (<em>list</em><em> of </em><em>SensitiveFeature</em>) – The list of sensitive features.
+Each element of the list must contain the index and the value that represents the unpriviledge sub-population.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>sensitiveFeatures</strong> – The same input, if operation finishes succefully</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of SensitiveFeature</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout_api.server.FixOutHandler.setTrainingData">
+<span class="sig-name descname"><span class="pre">setTrainingData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.FixOutHandler.setTrainingData" title="Permalink to this definition"></a></dt>
+<dd><p>Sends the training data to the FixOut’s server endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seriModel</strong> (<em>list</em><em> of </em><em>double</em>) – Training dataset, the data used to training the original model.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>status</strong> – Zero, if the operation is completed succefully</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fixout_api.server.explain_instance">
+<span class="sig-prename descclassname"><span class="pre">fixout_api.server.</span></span><span class="sig-name descname"><span class="pre">explain_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.explain_instance" title="Permalink to this definition"></a></dt>
+<dd><p>Explains one prediction using a post-hoc explanation method.</p>
+<p>Current explantion methods supported: LIME.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X_train</strong> (<em>list</em>) – List of metrics to be calculated.</p></li>
+<li><p><strong>sample</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be take into account to calculate fairness metrics.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>explanation</strong> – List with all requested metrics calculated.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of FairMetric</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fixout_api.server.toFIExplanation">
+<span class="sig-prename descclassname"><span class="pre">fixout_api.server.</span></span><span class="sig-name descname"><span class="pre">toFIExplanation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.server.toFIExplanation" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a LIME explanation to the <cite>FIExplanation</cite> format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>top_k</strong> (<em>list</em>) – Description</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ranking</strong> – Description</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of FairMetric</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-fixout_api.fairness">
+<span id="fixout-api-fairness-module"></span><h2>fixout_api.fairness module<a class="headerlink" href="#module-fixout_api.fairness" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="fixout_api.fairness.demographic_parity">
+<span class="sig-prename descclassname"><span class="pre">fixout_api.fairness.</span></span><span class="sig-name descname"><span class="pre">demographic_parity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.fairness.demographic_parity" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the demographic parity metric.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cm0</strong> – The confusion matrix of the unprivileged subpopulation.</p></li>
+<li><p><strong>cm1</strong> – The confusion matrix of the privileged subpopulation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>metric</strong> – The calculated demographic parity metric.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>FairMetric</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fixout_api.fairness.equal_opportunity">
+<span class="sig-prename descclassname"><span class="pre">fixout_api.fairness.</span></span><span class="sig-name descname"><span class="pre">equal_opportunity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.fairness.equal_opportunity" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the equal opportunity metric.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cm0</strong> – The confusion matrix of the unprivileged subpopulation.</p></li>
+<li><p><strong>cm1</strong> – The confusion matrix of the privileged subpopulation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>metric</strong> – The calculated equal opportunity metric.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>FairMetric</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="fixout_api.fairness.predictive_equality">
+<span class="sig-prename descclassname"><span class="pre">fixout_api.fairness.</span></span><span class="sig-name descname"><span class="pre">predictive_equality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout_api.fairness.predictive_equality" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the equal predictive equality metric.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cm0</strong> – The confusion matrix of the unprivileged subpopulation.</p></li>
+<li><p><strong>cm1</strong> – The confusion matrix of the privileged subpopulation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>metric</strong> – The calculated predictive equality metric.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>FairMetric</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-fixout_api.utils">
+<span id="fixout-api-utils-module"></span><h2>fixout_api.utils module<a class="headerlink" href="#module-fixout_api.utils" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-fixout_api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fixout_api" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to FixOut API’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, FixOut.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
