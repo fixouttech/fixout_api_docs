@@ -1,29 +1,29 @@
-fixout\_api package
+API definition
 ===================
 
 Submodules
 ----------
 
-fixout\_api.server module
+fixout.artifact
 -------------------------
 
-.. automodule:: fixout_api.server
+.. automodule:: fixout.artifact
    :members: 
    :undoc-members:
    :show-inheritance:
 
-fixout\_api.fairness module
+fixout.fairness
 ---------------------------
 
-.. automodule:: fixout_api.fairness
+.. automodule:: fixout.fairness
    :members:
    :undoc-members:
    :show-inheritance:
 
-fixout\_api.utils module
+fixout.utils
 ------------------------
 
-.. automodule:: fixout_api.utils
+.. automodule:: fixout.utils
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ fixout\_api.utils module
 Module contents
 ---------------
 
-.. automodule:: fixout_api
+.. automodule:: fixout
    :members:
    :undoc-members:
    :show-inheritance:
