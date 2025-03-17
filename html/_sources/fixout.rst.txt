@@ -12,6 +12,22 @@ fixout.artifact
    :undoc-members:
    :show-inheritance:
 
+fixout.runner
+-------------------------
+
+.. automodule:: fixout.runner
+   :members: 
+   :undoc-members:
+   :show-inheritance:
+
+fixout.helper
+-------------------------
+
+.. automodule:: fixout.helper
+   :members: 
+   :undoc-members:
+   :show-inheritance:
+
 fixout.fairness
 ---------------------------
 
