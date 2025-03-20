@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="./">
-  <head>
-<meta charset="utf-8"/>
+  <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="#" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="1. FixOut Core" href="modules/core.html" /><link rel="prev" title="FixOut documentation" href="index.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
-<meta name="robots" content="noindex" />
-<title>Search - FixOut 0.1.24 documentation</title><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+        <title>User Guide - FixOut 0.1.24 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
@@ -193,15 +193,15 @@
   
   <span class="sidebar-brand-text">FixOut 0.1.24 documentation</span>
   
-</a><form class="sidebar-search-container" method="get" action="#" role="search">
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="guide.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of User Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<ul class="current">
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">User Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of User Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="modules/core.html">1. FixOut Core</a></li>
 <li class="toctree-l2"><a class="reference internal" href="modules/web.html">2. FixOut Web Dashboard</a></li>
 </ul>
@@ -229,7 +229,13 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/guide.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
@@ -244,25 +250,66 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          
-<noscript>
-<div class="admonition error">
-  <p class="admonition-title">Error</p>
-  <p>
-    Please activate JavaScript to enable the search functionality.
-  </p>
+          <section id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Link to this heading">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>FixOut is still in development. <strong>The user guide is subject to change.</strong></p>
 </div>
-</noscript>
-
-<div id="search-results"></div>
+<p>FixOut can be used integrated into your ML model’s monitoring code or as a separate component.
+In this case, see FixOut Core, to learn which functionalities could be useful.</p>
+<p>For monitoring fairness of your ML model via a web interface that generates a dashboard,
+see FixOut Web Dashboard.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules/core.html">1. FixOut Core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/core.html#data-distribution">1.1. Data distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/core.html#correlation-analysis">1.2. Correlation analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/core.html#fairness-assessment">1.3. Fairness assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/core.html#reverse-engineering">1.4. Reverse engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/core.html#discriminatory-models">1.5. Discriminatory models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/core.html#models-compatible-with-fixout">1.6. Models compatible with FixOut</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/web.html">2. FixOut Web Dashboard</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/web.html#intro">2.1. Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/web.html#how-to-activate-it">2.2. How to activate it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/web.html#main-functionalities">2.3. Main functionalities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/web.html#data">2.3.1. Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/web.html#metrics">2.3.2. Metrics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="modules/core.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="section-number">1. </span>FixOut Core</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -292,8 +339,5 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=5fa4622c"></script>
     <script src="_static/tabs.js?v=3ee01567"></script>
-    
-<script src="_static/searchtools.js"></script>
-<script src="_static/language_data.js"></script>
-<script src="searchindex.js"></script></body>
+    </body>
 </html>

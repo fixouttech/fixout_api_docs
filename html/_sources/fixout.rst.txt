@@ -1,8 +1,14 @@
+===================
 API definition
 ===================
 
-Submodules
-----------
+.. warning ::
+
+    FixOut is still in development. **The API definition is subject to change.**
+
+.. toctree::
+   :numbered:
+   :maxdepth: 3
 
 fixout.artifact
 -------------------------
