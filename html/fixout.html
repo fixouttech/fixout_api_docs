@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Install" href="install.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
-        <title>API definition - FixOut 0.1.24 documentation</title>
+        <title>API definition - FixOut 0.1.32 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -167,7 +167,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">FixOut 0.1.24 documentation</div></a>
+      <a href="index.html"><div class="brand">FixOut 0.1.32 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -191,7 +191,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">FixOut 0.1.24 documentation</span>
+  <span class="sidebar-brand-text">FixOut 0.1.32 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -315,11 +315,69 @@ If no testing data is provided, an empty list will be used (default is None).</p
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.correlation">
+<span class="sig-name descname"><span class="pre">correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.correlation" title="Link to this definition">¶</a></dt>
+<dd><p>Shows correlation matrices and rankings of features ordered according to a correlation coefficient.
+The rankings are generated centered on sensitive features.</p>
+<section id="returns">
+<h4>Returns:<a class="headerlink" href="#returns" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>IFrame</dt><dd><p>A frame with the requested results</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.data_distribution">
+<span class="sig-name descname"><span class="pre">data_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.data_distribution" title="Link to this definition">¶</a></dt>
+<dd><p>Shows histograms to analyze the distribution of data centered on sensitive features.</p>
+<section id="id2">
+<h4>Returns:<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>IFrame</dt><dd><p>A frame with the requested results</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.data_visualization">
+<span class="sig-name descname"><span class="pre">data_visualization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.data_visualization" title="Link to this definition">¶</a></dt>
+<dd><p>Shows histograms to analyze the distribution of data centered on sensitive features.</p>
+<section id="id3">
+<h4>Returns:<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>IFrame</dt><dd><p>A frame with the requested results</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.discriminatory">
+<span class="sig-name descname"><span class="pre">discriminatory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.discriminatory" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.fairness">
+<span class="sig-name descname"><span class="pre">fairness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.fairness" title="Link to this definition">¶</a></dt>
+<dd><p>Shows the calculated fairness metrics for the provided model.</p>
+<section id="id4">
+<h4>Returns:<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>IFrame</dt><dd><p>A frame with the requested results</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fixout.runner.FixOutRunner.get_fairness">
 <span class="sig-name descname"><span class="pre">get_fairness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'original'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensitivefeature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.get_fairness" title="Link to this definition">¶</a></dt>
 <dd><p>Retrieves calculated fairness metrics for a given model and sensitive feature.</p>
-<section id="id2">
-<h4>Parameters:<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h4>
+<section id="id5">
+<h4>Parameters:<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h4>
 <dl class="simple">
 <dt>model<span class="classifier">str, optional</span></dt><dd><p>The model label to filter results (default: “original”).</p>
 </dd>
@@ -327,10 +385,24 @@ If no testing data is provided, an empty list will be used (default is None).</p
 </dd>
 </dl>
 </section>
-<section id="returns">
-<h4>Returns:<a class="headerlink" href="#returns" title="Link to this heading">¶</a></h4>
+<section id="id6">
+<h4>Returns:<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h4>
 <dl class="simple">
 <dt>dict</dt><dd><p>A dictionary where keys are model labels and values are the calculated fairness metrics.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.reverse">
+<span class="sig-name descname"><span class="pre">reverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.reverse" title="Link to this definition">¶</a></dt>
+<dd><p>Shows the performance metrics for reversed models.
+These models attempt to predict sensitive features from target labels.</p>
+<section id="id7">
+<h4>Returns:<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>IFrame</dt><dd><p>A frame with the requested results</p>
 </dd>
 </dl>
 </section>
@@ -340,8 +412,8 @@ If no testing data is provided, an empty list will be used (default is None).</p
 <dt class="sig sig-object py" id="fixout.runner.FixOutRunner.run">
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.run" title="Link to this definition">¶</a></dt>
 <dd><p>Runs FixOut with a given artifact.</p>
-<section id="id3">
-<h4>Parameters:<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h4>
+<section id="id8">
+<h4>Parameters:<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h4>
 <dl class="simple">
 <dt>fxa<span class="classifier">FixOutArtifact</span></dt><dd><p>Original model, training and/or testing data to process.</p>
 </dd>
@@ -350,8 +422,8 @@ otherwise only the evaluation will be executed and the results returned.</p>
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h4>Returns:<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h4>
+<section id="id9">
+<h4>Returns:<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h4>
 <dl class="simple">
 <dt>tuple or None</dt><dd><p>If <cite>show</cite> is True, returns None and actives a web interface.
 Otherwise, returns the computed evaluation results.</p>
@@ -359,6 +431,34 @@ Otherwise, returns the computed evaluation results.</p>
 </dl>
 </section>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.runJ">
+<span class="sig-name descname"><span class="pre">runJ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fxa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.runJ" title="Link to this definition">¶</a></dt>
+<dd><p>Runs FixOut with a given artifact in a Jupyter environment.</p>
+<section id="id10">
+<h4>Parameters:<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>fxa<span class="classifier">FixOutArtifact</span></dt><dd><p>Original model, training and/or testing data to process.</p>
+</dd>
+<dt>show<span class="classifier">bool, optional</span></dt><dd><p>If True (default), the output will be shown using a web interface,
+otherwise None is returned.</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h4>Returns:<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h4>
+<dl class="simple">
+<dt>IFrame</dt><dd><p>Displays a frame with all the results obtained using FixOut.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fixout.runner.FixOutRunner.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fixout.runner.FixOutRunner.show" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </section>
 </dd></dl>
@@ -464,6 +564,9 @@ variable using only sensitive attributes. This helps analyze bias in models.</p>
 </section>
 <section id="module-fixout.fairness">
 <span id="fixout-fairness"></span><h2>fixout.fairness<a class="headerlink" href="#module-fixout.fairness" title="Link to this heading">¶</a></h2>
+<p>This module provides a suite of fairness metrics for evaluating machine learning models.
+It includes measures like Conditional Accuracy Equality, Predictive Parity, Equal Opportunity, and more.
+Each metric is implemented using a generic evaluation wrapper and is based on protected attributes or sensitive features to measure fairness across demographic groups.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="fixout.fairness.computeFairnessMetrics">
 <span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">computeFairnessMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.computeFairnessMetrics" title="Link to this definition">¶</a></dt>
@@ -474,7 +577,7 @@ variable using only sensitive attributes. This helps analyze bias in models.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>metrics</strong> (<em>list</em>) – List of fairness metric types to be calculated.</p></li>
-<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be take into account to calculate fairness metrics.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be taken into account to calculate fairness metrics.</p></li>
 <li><p><strong>X_test</strong> (<em>array-like</em>) – Feature matrix of the test set.</p></li>
 <li><p><strong>y_test</strong> (<em>array-like</em>) – True labels of the test set.</p></li>
 <li><p><strong>y_pred</strong> (<em>array-like</em>) – Predicted labels.</p></li>
@@ -492,13 +595,16 @@ Returns an empty list if no metric is informed or a problem when calculating the
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fixout.fairness.conditional_accuracy_equality">
-<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">conditional_accuracy_equality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.conditional_accuracy_equality" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">conditional_accuracy_equality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.conditional_accuracy_equality" title="Link to this definition">¶</a></dt>
 <dd><p>Computes the Conditional Accuracy Equality (CEA) fairness metric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cm0</strong> (<em>array-like</em>) – Confusion matrix for the unprivileged group.</p></li>
-<li><p><strong>cm1</strong> (<em>array-like</em>) – Confusion matrix for the privileged group.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be taken into account to calculate fairness metrics.</p></li>
+<li><p><strong>X_test</strong> (<em>array-like</em>) – Feature set for testing the model.</p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – True labels for the test data.</p></li>
+<li><p><strong>model</strong> (<em>sklearn-like estimator</em><em>, </em><em>optional</em>) – Trained model to generate predictions. If <cite>y_pred</cite> is not provided, this model will be used.</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Predicted labels for <cite>X_test</cite>. If provided, <cite>model</cite> is ignored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -512,13 +618,16 @@ Returns an empty list if no metric is informed or a problem when calculating the
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fixout.fairness.demographic_parity">
-<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">demographic_parity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.demographic_parity" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">demographic_parity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.demographic_parity" title="Link to this definition">¶</a></dt>
 <dd><p>Calculates the demographic parity (DP) fairness metric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cm0</strong> (<em>array-like</em>) – Confusion matrix for the unprivileged group.</p></li>
-<li><p><strong>cm1</strong> (<em>array-like</em>) – Confusion matrix for the privileged group.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be taken into account to calculate fairness metrics.</p></li>
+<li><p><strong>X_test</strong> (<em>array-like</em>) – Feature set for testing the model.</p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – True labels for the test data.</p></li>
+<li><p><strong>model</strong> (<em>sklearn-like estimator</em><em>, </em><em>optional</em>) – Trained model to generate predictions. If <cite>y_pred</cite> is not provided, this model will be used.</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Predicted labels for <cite>X_test</cite>. If provided, <cite>model</cite> is ignored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -532,13 +641,16 @@ Returns an empty list if no metric is informed or a problem when calculating the
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fixout.fairness.equal_opportunity">
-<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">equal_opportunity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.equal_opportunity" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">equal_opportunity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.equal_opportunity" title="Link to this definition">¶</a></dt>
 <dd><p>Calculates the equal opportunity (EO) fairness metric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cm0</strong> (<em>array-like</em>) – Confusion matrix for the unprivileged group.</p></li>
-<li><p><strong>cm1</strong> (<em>array-like</em>) – Confusion matrix for the privileged group.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be taken into account to calculate fairness metrics.</p></li>
+<li><p><strong>X_test</strong> (<em>array-like</em>) – Feature set for testing the model.</p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – True labels for the test data.</p></li>
+<li><p><strong>model</strong> (<em>sklearn-like estimator</em><em>, </em><em>optional</em>) – Trained model to generate predictions. If <cite>y_pred</cite> is not provided, this model will be used.</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Predicted labels for <cite>X_test</cite>. If provided, <cite>model</cite> is ignored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -552,13 +664,16 @@ Returns an empty list if no metric is informed or a problem when calculating the
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fixout.fairness.equalized_odds">
-<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">equalized_odds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.equalized_odds" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">equalized_odds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.equalized_odds" title="Link to this definition">¶</a></dt>
 <dd><p>Calculates the equalized odds (EOD) fairness metric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cm0</strong> (<em>array-like</em>) – Confusion matrix for the unprivileged group.</p></li>
-<li><p><strong>cm1</strong> (<em>array-like</em>) – Confusion matrix for the privileged group.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be taken into account to calculate fairness metrics.</p></li>
+<li><p><strong>X_test</strong> (<em>array-like</em>) – Feature set for testing the model.</p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – True labels for the test data.</p></li>
+<li><p><strong>model</strong> (<em>sklearn-like estimator</em><em>, </em><em>optional</em>) – Trained model to generate predictions. If <cite>y_pred</cite> is not provided, this model will be used.</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Predicted labels for <cite>X_test</cite>. If provided, <cite>model</cite> is ignored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -572,13 +687,16 @@ Returns an empty list if no metric is informed or a problem when calculating the
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fixout.fairness.predictive_equality">
-<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">predictive_equality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.predictive_equality" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">predictive_equality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.predictive_equality" title="Link to this definition">¶</a></dt>
 <dd><p>Calculates the equal predictive equality metric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cm0</strong> (<em>array-like</em>) – Confusion matrix for the unprivileged group.</p></li>
-<li><p><strong>cm1</strong> (<em>array-like</em>) – Confusion matrix for the privileged group.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be taken into account to calculate fairness metrics.</p></li>
+<li><p><strong>X_test</strong> (<em>array-like</em>) – Feature set for testing the model.</p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – True labels for the test data.</p></li>
+<li><p><strong>model</strong> (<em>sklearn-like estimator</em><em>, </em><em>optional</em>) – Trained model to generate predictions. If <cite>y_pred</cite> is not provided, this model will be used.</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Predicted labels for <cite>X_test</cite>. If provided, <cite>model</cite> is ignored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -592,13 +710,16 @@ Returns an empty list if no metric is informed or a problem when calculating the
 
 <dl class="py function">
 <dt class="sig sig-object py" id="fixout.fairness.predictive_parity">
-<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">predictive_parity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cm0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cm1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.predictive_parity" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">fixout.fairness.</span></span><span class="sig-name descname"><span class="pre">predictive_parity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sFeature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fixout.fairness.predictive_parity" title="Link to this definition">¶</a></dt>
 <dd><p>Computes the Predictive Parity (PP) fairness metric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cm0</strong> (<em>array-like</em>) – Confusion matrix for the unprivileged group.</p></li>
-<li><p><strong>cm1</strong> (<em>array-like</em>) – Confusion matrix for the privileged group.</p></li>
+<li><p><strong>sFeature</strong> (<em>SensitiveFeature</em>) – Sensitive feature that will be taken into account to calculate fairness metrics.</p></li>
+<li><p><strong>X_test</strong> (<em>array-like</em>) – Feature set for testing the model.</p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – True labels for the test data.</p></li>
+<li><p><strong>model</strong> (<em>sklearn-like estimator</em><em>, </em><em>optional</em>) – Trained model to generate predictions. If <cite>y_pred</cite> is not provided, this model will be used.</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Predicted labels for <cite>X_test</cite>. If provided, <cite>model</cite> is ignored.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -678,8 +799,16 @@ Returns an empty list if no metric is informed or a problem when calculating the
 </li>
 <li><a class="reference internal" href="#module-fixout.runner">fixout.runner</a><ul>
 <li><a class="reference internal" href="#fixout.runner.FixOutRunner"><code class="docutils literal notranslate"><span class="pre">FixOutRunner</span></code></a><ul>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.correlation"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.correlation()</span></code></a></li>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.data_distribution"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.data_distribution()</span></code></a></li>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.data_visualization"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.data_visualization()</span></code></a></li>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.discriminatory"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.discriminatory()</span></code></a></li>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.fairness"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.fairness()</span></code></a></li>
 <li><a class="reference internal" href="#fixout.runner.FixOutRunner.get_fairness"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.get_fairness()</span></code></a></li>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.reverse"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.reverse()</span></code></a></li>
 <li><a class="reference internal" href="#fixout.runner.FixOutRunner.run"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.run()</span></code></a></li>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.runJ"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.runJ()</span></code></a></li>
+<li><a class="reference internal" href="#fixout.runner.FixOutRunner.show"><code class="docutils literal notranslate"><span class="pre">FixOutRunner.show()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -722,7 +851,7 @@ Returns an empty list if no metric is informed or a problem when calculating the
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=ebdbb45b"></script>
+</div><script src="_static/documentation_options.js?v=e0e570cb"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=5fa4622c"></script>
